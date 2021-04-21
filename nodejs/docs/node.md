@@ -1,12 +1,26 @@
 # commands
+## abrir terminal do node
 `$ node`
+
+## Usar o objeto Node "process" para entrar com parâmetro ao iniciar um script
 `$ node process João Paulo`
 `$ node process --name "João Paulo" --greeting "tudo bem com você?"`
 
+## ver a versão do NPM (Node Package Manager)
 `$ npm -v`
+
+## inicializar NPM
 `$ npm init`
+
+## listar pacotes NPM
+`$ npm ls` 
+
+## executar script registrado no package.json com a chave "start"
 `$ npm run start`
+
+## install package
 `$ sudo npm install cfonts`
+
 `$ npm fund`
 
 ## instalar dependência global
