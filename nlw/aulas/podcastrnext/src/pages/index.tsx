@@ -28,7 +28,7 @@ export default function Home(props: HomeProps) {
     </div>
   )
 }
-
+ 
 export const getStaticProps: GetStaticProps = async () => { // executa toda vez que alguém acessar a HOME ("/") da aplicação 
     const { data } = await api.get('episodes', {
       params: {
