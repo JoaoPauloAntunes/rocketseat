@@ -88,83 +88,54 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/index.tsx");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 2:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("QeBL");
-
-
-/***/ }),
-
-/***/ "F5FC":
-/***/ (function(module, exports) {
-
-module.exports = require("react/jsx-runtime");
-
-/***/ }),
-
-/***/ "QeBL":
+/***/ "./src/pages/index.tsx":
+/*!*****************************!*\
+  !*** ./src/pages/index.tsx ***!
+  \*****************************/
+/*! exports provided: default, getStaticProps */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Home; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getStaticProps\", function() { return getStaticProps; });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _services_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/api */ \"./src/services/api.ts\");\n\nvar _jsxFileName = \"/home/joao/Documents/_DEV/rocketseat/nlw/aulas/podcastrnext/src/pages/index.tsx\";\n\nfunction Home(props) {\n  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"div\", {\n    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"h1\", {\n      children: \"Index\"\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 19,\n      columnNumber: 7\n    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__[\"jsxDEV\"])(\"p\", {\n      children: JSON.stringify(props.episodes)\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 20,\n      columnNumber: 7\n    }, this)]\n  }, void 0, true, {\n    fileName: _jsxFileName,\n    lineNumber: 18,\n    columnNumber: 5\n  }, this);\n}\nconst getStaticProps = async () => {\n  // executa toda vez que alguém acessar a HOME (\"/\") da aplicação \n  const {\n    data\n  } = await _services_api__WEBPACK_IMPORTED_MODULE_1__[\"api\"].get('episodes', {\n    params: {\n      _limit: 12,\n      _sort: 'published_at',\n      _order: 'desc'\n    }\n  });\n  return {\n    props: {\n      // o que é retornado aqui, é repassado para o componente function Home no argumento props\n      episodes: data\n    },\n    revalidate: 60 * 60 * 8 // a cada 8 horas, quando a pessoa acessar esta página, a pessoa vai gerar uma nova versão desta página\n\n  };\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvcGFnZXMvaW5kZXgudHN4PzQxZTAiXSwibmFtZXMiOlsiSG9tZSIsInByb3BzIiwiSlNPTiIsInN0cmluZ2lmeSIsImVwaXNvZGVzIiwiZ2V0U3RhdGljUHJvcHMiLCJkYXRhIiwiYXBpIiwiZ2V0IiwicGFyYW1zIiwiX2xpbWl0IiwiX3NvcnQiLCJfb3JkZXIiLCJyZXZhbGlkYXRlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUNBO0FBY2UsU0FBU0EsSUFBVCxDQUFjQyxLQUFkLEVBQWdDO0FBQzdDLHNCQUNFO0FBQUEsNEJBQ0U7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsWUFERixlQUVFO0FBQUEsZ0JBQUlDLElBQUksQ0FBQ0MsU0FBTCxDQUFlRixLQUFLLENBQUNHLFFBQXJCO0FBQUo7QUFBQTtBQUFBO0FBQUE7QUFBQSxZQUZGO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxVQURGO0FBTUQ7QUFFTSxNQUFNQyxjQUE4QixHQUFHLFlBQVk7QUFBRTtBQUN4RCxRQUFNO0FBQUVDO0FBQUYsTUFBVyxNQUFNQyxpREFBRyxDQUFDQyxHQUFKLENBQVEsVUFBUixFQUFvQjtBQUN6Q0MsVUFBTSxFQUFFO0FBQ05DLFlBQU0sRUFBRSxFQURGO0FBRU5DLFdBQUssRUFBRSxjQUZEO0FBR05DLFlBQU0sRUFBRTtBQUhGO0FBRGlDLEdBQXBCLENBQXZCO0FBUUEsU0FBTztBQUNMWCxTQUFLLEVBQUU7QUFBRTtBQUNQRyxjQUFRLEVBQUVFO0FBREwsS0FERjtBQUlMTyxjQUFVLEVBQUUsS0FBSyxFQUFMLEdBQVUsQ0FKakIsQ0FJb0I7O0FBSnBCLEdBQVA7QUFNRCxDQWZJIiwiZmlsZSI6Ii4vc3JjL3BhZ2VzL2luZGV4LnRzeC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEdldFN0YXRpY1Byb3BzIH0gZnJvbSAnbmV4dCc7XG5pbXBvcnQgeyBhcGkgfSBmcm9tICcuLi9zZXJ2aWNlcy9hcGknO1xuXG5cbnR5cGUgRXBpc29kZSA9IHtcbiAgaWQ6IHN0cmluZztcbiAgdGl0bGU6IHN0cmluZztcbiAgbWVtYmVyczogc3RyaW5nO1xuICAvLyAuLi5cbn1cblxudHlwZSBIb21lUHJvcHMgPSB7XG4gIGVwaXNvZGVzOiBFcGlzb2RlW107XG59XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEhvbWUocHJvcHM6IEhvbWVQcm9wcykge1xuICByZXR1cm4gKFxuICAgIDxkaXY+XG4gICAgICA8aDE+SW5kZXg8L2gxPlxuICAgICAgPHA+e0pTT04uc3RyaW5naWZ5KHByb3BzLmVwaXNvZGVzKX08L3A+XG4gICAgPC9kaXY+XG4gIClcbn1cblxuZXhwb3J0IGNvbnN0IGdldFN0YXRpY1Byb3BzOiBHZXRTdGF0aWNQcm9wcyA9IGFzeW5jICgpID0+IHsgLy8gZXhlY3V0YSB0b2RhIHZleiBxdWUgYWxndcOpbSBhY2Vzc2FyIGEgSE9NRSAoXCIvXCIpIGRhIGFwbGljYcOnw6NvIFxuICAgIGNvbnN0IHsgZGF0YSB9ID0gYXdhaXQgYXBpLmdldCgnZXBpc29kZXMnLCB7XG4gICAgICBwYXJhbXM6IHtcbiAgICAgICAgX2xpbWl0OiAxMixcbiAgICAgICAgX3NvcnQ6ICdwdWJsaXNoZWRfYXQnLFxuICAgICAgICBfb3JkZXI6ICdkZXNjJ1xuICAgICAgfVxuICAgIH0pO1xuICBcbiAgICByZXR1cm4ge1xuICAgICAgcHJvcHM6IHsgLy8gbyBxdWUgw6kgcmV0b3JuYWRvIGFxdWksIMOpIHJlcGFzc2FkbyBwYXJhIG8gY29tcG9uZW50ZSBmdW5jdGlvbiBIb21lIG5vIGFyZ3VtZW50byBwcm9wc1xuICAgICAgICBlcGlzb2RlczogZGF0YSxcbiAgICAgIH0sXG4gICAgICByZXZhbGlkYXRlOiA2MCAqIDYwICogOCwgLy8gYSBjYWRhIDggaG9yYXMsIHF1YW5kbyBhIHBlc3NvYSBhY2Vzc2FyIGVzdGEgcMOhZ2luYSwgYSBwZXNzb2EgdmFpIGdlcmFyIHVtYSBub3ZhIHZlcnPDo28gZGVzdGEgcMOhZ2luYVxuICAgIH1cbiAgfSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/pages/index.tsx\n");
 
-// SPA (não usar quando as informações que serão obtidas com esta estratégia precisarem estar disponíveis assim que a página é exibida para o usuário; o Crawler não vai indexar isso) 
-// SSR
-// SSG (SÓ FUNCIONA EM PRODUÇÃO; utilizar quando deseja-se cacher a página no servidor (fazer uma versão estática do site no servidor)- performance; ex.: 1 milhão de pessoas acessa a mesma página no mesmo dia => cachear site no servidor uma vez por dia)
-// export default function Home() {
-//   useEffect( // SPA
-//     () => {
-//       fetch('http://localhost:3333/episodes')
-//         .then(response => response.json())
-//         .then(data => console.log(data))
-//     }, // o que fazer 
-//     [] // quando; "[]" significa que a função vai ser executada assim que o componente for exibido em tela, uma única vez
-//   )
-//   return (
-//     <h1>Index</h1>
-//   )
-// }
-function Home(props) {
-  console.log(props.episodes);
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("h1", {
-    children: "Index"
-  });
-} // SSR
-// export async function getServerSideProps() { // executa toda vez que alguém acessar a HOME ("/") da aplicação 
-//   const response = await fetch('http://localhost:3333/episodes');
-//   const data = await response.json();
-//   return {
-//     props: { // o que é retornado aqui, é repassado para o componente function Home no argumento props
-//       episodes: data,
-//     }
-//   }
-// }
-// SSG 
-// criar build do projeto para ver isso funcionando em produção!
+/***/ }),
 
-async function getStaticProps() {
-  // executa toda vez que alguém acessar a HOME ("/") da aplicação 
-  const response = await fetch('http://localhost:3333/episodes');
-  const data = await response.json();
-  return {
-    props: {
-      // o que é retornado aqui, é repassado para o componente function Home no argumento props
-      episodes: data
-    },
-    revalidate: 60 * 60 * 8 // a cada 8 horas, quando a pessoa acessar esta página, a pessoa vai gerar uma nova versão desta página
+/***/ "./src/services/api.ts":
+/*!*****************************!*\
+  !*** ./src/services/api.ts ***!
+  \*****************************/
+/*! exports provided: api */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-  };
-}
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"api\", function() { return api; });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"axios\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n\nconst api = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({\n  baseURL: 'http://localhost:3333/'\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc2VydmljZXMvYXBpLnRzPzBlOWQiXSwibmFtZXMiOlsiYXBpIiwiYXhpb3MiLCJjcmVhdGUiLCJiYXNlVVJMIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBRU8sTUFBTUEsR0FBRyxHQUFHQyw0Q0FBSyxDQUFDQyxNQUFOLENBQWE7QUFDOUJDLFNBQU8sRUFBRTtBQURxQixDQUFiLENBQVoiLCJmaWxlIjoiLi9zcmMvc2VydmljZXMvYXBpLnRzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGF4aW9zIGZyb20gJ2F4aW9zJztcblxuZXhwb3J0IGNvbnN0IGFwaSA9IGF4aW9zLmNyZWF0ZSh7XG4gIGJhc2VVUkw6ICdodHRwOi8vbG9jYWxob3N0OjMzMzMvJ1xufSkiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/services/api.ts\n");
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"axios\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJheGlvc1wiPzcwYzYiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiYXhpb3MuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IHJlcXVpcmUoXCJheGlvc1wiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///axios\n");
+
+/***/ }),
+
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react/jsx-dev-runtime\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdC9qc3gtZGV2LXJ1bnRpbWVcIj9jZDkwIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6InJlYWN0L2pzeC1kZXYtcnVudGltZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcInJlYWN0L2pzeC1kZXYtcnVudGltZVwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///react/jsx-dev-runtime\n");
 
 /***/ })
 

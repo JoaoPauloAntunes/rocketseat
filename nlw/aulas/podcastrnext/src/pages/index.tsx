@@ -1,51 +1,35 @@
-// SPA (não usar quando as informações que serão obtidas com esta estratégia precisarem estar disponíveis assim que a página é exibida para o usuário; o Crawler não vai indexar isso) 
-// SSR
-// SSG (SÓ FUNCIONA EM PRODUÇÃO; utilizar quando deseja-se cacher a página no servidor (fazer uma versão estática do site no servidor)- performance; ex.: 1 milhão de pessoas acessa a mesma página no mesmo dia => cachear site no servidor uma vez por dia)
-
-import { useEffect } from "react";
+import { GetStaticProps } from 'next';
+import { api } from '../services/api';
 
 
-// export default function Home() {
-//   useEffect( // SPA
-//     () => {
-//       fetch('http://localhost:3333/episodes')
-//         .then(response => response.json())
-//         .then(data => console.log(data))
-//     }, // o que fazer 
-//     [] // quando; "[]" significa que a função vai ser executada assim que o componente for exibido em tela, uma única vez
-//   )
+type Episode = {
+  id: string;
+  title: string;
+  members: string;
+  // ...
+}
 
-//   return (
-//     <h1>Index</h1>
-//   )
-// }
+type HomeProps = {
+  episodes: Episode[];
+}
 
-
-export default function Home(props) {
-  console.log(props.episodes);
-
+export default function Home(props: HomeProps) {
   return (
-    <h1>Index</h1>
+    <div>
+      <h1>Index</h1>
+      <p>{JSON.stringify(props.episodes)}</p>
+    </div>
   )
 }
 
- // SSR
-// export async function getServerSideProps() { // executa toda vez que alguém acessar a HOME ("/") da aplicação 
-//   const response = await fetch('http://localhost:3333/episodes');
-//   const data = await response.json();
-
-//   return {
-//     props: { // o que é retornado aqui, é repassado para o componente function Home no argumento props
-//       episodes: data,
-//     }
-//   }
-// }
-
-// SSG 
-// AVISO: criar build do projeto para ver isso funcionando em produção!
-export async function getStaticProps() { // executa toda vez que alguém acessar a HOME ("/") da aplicação 
-    const response = await fetch('http://localhost:3333/episodes');
-    const data = await response.json();
+export const getStaticProps: GetStaticProps = async () => { // executa toda vez que alguém acessar a HOME ("/") da aplicação 
+    const { data } = await api.get('episodes', {
+      params: {
+        _limit: 12,
+        _sort: 'published_at',
+        _order: 'desc'
+      }
+    });
   
     return {
       props: { // o que é retornado aqui, é repassado para o componente function Home no argumento props
