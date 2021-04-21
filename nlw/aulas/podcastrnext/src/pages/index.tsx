@@ -2,7 +2,7 @@
 // SSR
 // SSG (SÓ FUNCIONA EM PRODUÇÃO; utilizar quando deseja-se cacher a página no servidor (fazer uma versão estática do site no servidor)- performance; ex.: 1 milhão de pessoas acessa a mesma página no mesmo dia => cachear site no servidor uma vez por dia)
 
-import { useEffect } from "react"
+import { useEffect } from "react";
 
 
 // export default function Home() {
