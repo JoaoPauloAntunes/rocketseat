@@ -42,7 +42,10 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                 />
 
                 <div className={styles.episodeDetails}>
-                  <Link href={`/episodes/${episode.id}`}> {/* Usar a Link[href] ao invés de a[href] para ir de uma página para outra sem recarregar todo os arquivos da página- comportamento padrão do HTML que é desnecessário */}
+                  {/* Usar a Link[href] ao invés de a[href] para ir de uma página para outra 
+                  sem recarregar todo os arquivos da página- comportamento padrão do HTML 
+                  que é desnecessário */}
+                  <Link href={`/episodes/${episode.id}`}>
                     <a>{episode.title}</a>
                   </Link>
                   <p>{episode.members}</p>
@@ -54,7 +57,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                   <img src="/play-green.svg" alt="Tocar episódio" />
                 </button>
               </li>
-            )
+            );
           })}
         </ul>
       </section>
