@@ -11,7 +11,10 @@ type Episode = {
 type PlayerContextData = {
   episodeList: Episode[]; // ou Array<Episode>
   currentEpisodeIndex: number;
+  isPlaying: boolean;
   play: (episode: Episode) => void;
+  setPlayingState: (state: boolean) => void;
+  tooglePlay: () => void;
 }
 /*
 no parâmetro em createContext, podemos passar qualquer valor; é o valor inicial do contexto
